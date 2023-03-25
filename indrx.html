@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <title>PLANT DISEASE CLASSIFIER</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbG+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMM+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <hr>
+    <div class="upload-btn-wrapper">
+        <button class="btn upload-file font-weight-500">
+            <span class="upload-btn">
+                <i class="material-icons d-block font-50 pb-2">cloud_upload</i>
+                <p id="choose-text-1">Choose Image of Crop leaf</p>
+            </span>
+            <span class="upload-select-button" id="blankFile-1">
+                *Supports .png, .jpg, .jpeg, .jfif
+            </span>
+            <span class="success-1">
+                <i class="material-icons text-success">check</i>
+            </span>
+        </button>
+        <inputtype="file"name="uploadImage"id="uploadImage">
+            <div class="row">
+                <div class="box">
+                    <imgsrc=""alt=""id="image"width="224"height="224">
+                        <div class="box box-result">
+                            <div class="init_status"></div>
+                            <div>
+                                <h2>Your Plant is infected with :-
+                                    <span class="pred_class"></span>
+                                </h2>
+                            </div>
+                            <div class="accuracy">
+                                <div class="progress" id="progress">
+                                    <div class="inner">
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="padding : 10px;"> CONFIDENCE :
+                                <b><span class="confidence"></span></b> %
+                            </p>
+                        </div>
+                </div>
+            </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/2.0.1/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progre
+    ssbar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
